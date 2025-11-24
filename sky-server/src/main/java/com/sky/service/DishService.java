@@ -3,6 +3,8 @@ package com.sky.service;
 import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
 import com.sky.result.PageResult;
+import com.sky.vo.DishVO;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -12,4 +14,9 @@ public interface DishService {
     PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO);
 
     void deleteBatch(List<Long> dishIds);
+
+    @Select("select * from dish where id=#{id}")
+    DishVO getById(Long id);
+
+    void updateWithFlavor(DishDTO dishDTO);
 }
