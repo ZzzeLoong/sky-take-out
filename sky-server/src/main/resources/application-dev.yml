@@ -6,6 +6,13 @@ sky:
     database: sky_take_out
     username: root
     password: qq123456
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
+  wechat:
+    appid: wxffb3637a228223b8
+    secret: 84311df9199ecacdf4f12d27b6b9522d
 
 file:
   upload-path: ${user.dir}/sky-server/images/

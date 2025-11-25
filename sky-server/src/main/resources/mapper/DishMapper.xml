@@ -39,4 +39,16 @@
         on d.id=sd.dish_id
         where sd.setmeal_id=#{id}
     </select>
+
+    <select id="list" parameterType="Dish" resultType="Dish">
+        select * from setmeal
+        <where>
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
 </mapper>
