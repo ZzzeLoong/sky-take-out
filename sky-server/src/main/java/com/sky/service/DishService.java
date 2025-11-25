@@ -15,8 +15,11 @@ public interface DishService {
 
     void deleteBatch(List<Long> dishIds);
 
-    @Select("select * from dish where id=#{id}")
     DishVO getById(Long id);
 
     void updateWithFlavor(DishDTO dishDTO);
+
+    void startOrStopDish(Integer status, Long dishId);
+
+    List<DishVO> getByCategoryId(Long categoryId);
 }

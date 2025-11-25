@@ -8,6 +8,8 @@ import com.sky.enumeration.OperationType;
 import com.sky.vo.DishVO;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 @Mapper
 public interface DishMapper {
 
@@ -36,4 +38,9 @@ public interface DishMapper {
 
     @AutoFill(OperationType.UPDATE)
     void update(Dish dish);
+
+    @Select("SELECT * from dish where category_id=#{categoryId}")
+    List<DishVO> getByCategoryId(Long categoryId);
+
+    List<Dish> getBySetmealId(Long id);
 }
