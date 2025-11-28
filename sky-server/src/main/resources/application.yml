@@ -27,7 +27,11 @@ spring:
     weChatPayCertFilePath: ${sky.wechat.weChatPayCertFilePath}
     notifyUrl: ${sky.wechat.notifyUrl}
     refundNotifyUrl: ${sky.wechat.refundNotifyUrl}
-
+  shop:
+    address: ${sky.shop.address}
+  baidu:
+    ak: ${sky.baidu.ak}
+    sk: ${sky.baidu.sk}
 mybatis:
   #mapper配置文件
   mapper-locations: classpath:mapper/*.xml
