@@ -41,7 +41,7 @@
     </select>
 
     <select id="list" parameterType="Dish" resultType="Dish">
-        select * from setmeal
+        select * from dish
         <where>
             <if test="categoryId != null">
                 and category_id = #{categoryId}
