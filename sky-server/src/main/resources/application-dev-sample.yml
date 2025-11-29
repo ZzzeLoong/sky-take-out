@@ -1,0 +1,41 @@
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: sky_take_out
+    username: 数据库
+    password: 数据库密码
+  redis:
+    host: localhost
+    port: 6379
+    password: 123***456
+    database: 10 (可选1-18)
+  wechat:
+    appid: 申请微信小程序获取
+    secret: 申请微信小程序获取
+    #    以下字段需要营业资质获取，目前实现的是模拟微信支付可以不用下面字段
+    mchid: 18888888888
+    mchSerialNo: 4B3B3DC35414*****55BAF8DE9CC7CF407606
+    privateKeyFilePath: D:\apiclient_key.pem
+    apiV3Key: CZBK51236435wxpay435434323FFDuv3
+    weChatPayCertFilePath: D:\wechatpay_166D96F876F45C7D07CE98952A96EC980368ACFC.pem
+    notifyUrl: https://www.weixin.qq.com/wxpay/pay.php
+    refundNotifyUrl: https://www.weixin.qq.com/wxpay/pay.php
+  shop:
+    address: 北京市海淀区双清路30号
+  baidu:
+    ak: 申请百度地图api获取
+    sk: 申请百度地图api开启sn效验获取
+  #阿里云oss存储配置，目前实现本地存储，不需要配置
+  alioss:
+    endpoint: oss-cn-hangzhou.aliyuncs.com
+    access-key-id: LTAI5tPeFLzsPPT8gG3LPW64
+    access-key-secret: U6k1brOZ8gaOIXv3nXbulGTUzy6Pd7
+    bucket-name: sky-take-out
+
+file:
+  upload-path: ${user.dir}/sky-server/images/ #本地存储菜品图片地址
+
+requestHeader: http://localhost:8080/images/ #前端获取菜品图片地址
+

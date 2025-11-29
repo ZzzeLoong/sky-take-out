@@ -32,6 +32,12 @@ spring:
   baidu:
     ak: ${sky.baidu.ak}
     sk: ${sky.baidu.sk}
+    #阿里云oss存储配置，目前实现本地存储，不需要配置
+  alioss:
+    endpoint: ${sky.alioss.endpoint}
+    access-key-id: ${sky.alioss.access-key-id}
+    access-key-secret: ${sky.alioss.access-key-secret}
+    bucket-name: ${sky.alioss.bucket-name}
 mybatis:
   #mapper配置文件
   mapper-locations: classpath:mapper/*.xml

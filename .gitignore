@@ -6,3 +6,4 @@
 **/test/
 sky-server/images/*
 **/application-dev.yml
+!sky-server/images/.gitkeep
