@@ -30,9 +30,9 @@ sky:
   #阿里云oss存储配置，目前实现本地存储，不需要配置
   alioss:
     endpoint: oss-cn-hangzhou.aliyuncs.com
-    access-key-id: LTAI5tPeFLzsPPT8gG3LPW64
-    access-key-secret: U6k1brOZ8gaOIXv3nXbulGTUzy6Pd7
-    bucket-name: sky-take-out
+    access-key-id: 申请阿里云oss存储获取
+    access-key-secret: 申请阿里云oss存储获取
+    bucket-name: 存储桶名称
 
 file:
   upload-path: ${user.dir}/sky-server/images/ #本地存储菜品图片地址
