@@ -75,7 +75,7 @@ public class OrderController {
         return Result.success();
     }
 
-    @PutMapping("/complete/{id}}")
+    @PutMapping("/complete/{id}")
     @ApiOperation("完成订单")
     public Result complete(@PathVariable("id") Long orderId) throws Exception{
         orderService.complete(orderId);
