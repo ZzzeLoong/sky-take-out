@@ -44,4 +44,6 @@ public interface OrderService {
     void deliver(Long orderId) throws Exception;
 
     void complete(Long orderId) throws Exception;
+
+    void reminder(Long id);
 }

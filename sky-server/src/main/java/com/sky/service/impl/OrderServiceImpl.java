@@ -381,6 +381,23 @@ public class OrderServiceImpl implements OrderService {
         }
     }
 
+    @Override
+    public void reminder(Long id) {
+        Orders orders = orderMapper.getByOrderId(id);
+        if(orders==null){
+            throw new OrderBusinessException(MessageConstant.ORDER_NOT_FOUND);
+        }
+
+        Map map = new HashMap();
+        map.put("type", 2);//消息类型，2表示客户催单
+        map.put("orderId", id);
+        map.put("content", "订单号：" +orders.getNumber());
+
+        //通过WebSocket实现来单提醒，向客户端浏览器推送消息
+        webSocketServer.sendToAllClient(JSON.toJSONString(map));
+
+    }
+
     private String getOrderDishesStr(Orders orders){
         List<OrderDetail> orderDetailList = orderDetailMapper.getById(orders.getId());
         String output= "";
