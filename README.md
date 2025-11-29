@@ -16,7 +16,7 @@
 使用 [仓库地址](https://github.com/ZzzeLoong/sky-take-out.git) 将代码克隆到本地：
 
 ```bash
-git clone [https://github.com/ZzzeLoong/sky-take-out.git](https://github.com/ZzzeLoong/sky-take-out.git)
+git clone https://github.com/ZzzeLoong/sky-take-out.git
 ```
 
 ### 3. 导入数据库
@@ -68,5 +68,5 @@ git clone [https://github.com/ZzzeLoong/sky-take-out.git](https://github.com/Zzz
 <img src="./assets/8.png" height="500px"/>
 <img src="./assets/9.png" height="500px"/>
 <img src="./assets/10.png" height="500px"/>
-<img src="./assets/11.png" height="500px"/>
+<img src="./assets/11.png" height="450px"/>
 <img src="./assets/12.png"/>
