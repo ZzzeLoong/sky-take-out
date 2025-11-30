@@ -98,6 +98,7 @@ public class DishServiceImpl implements DishService {
     }
 
     @Override
+    @Transactional
     public void updateWithFlavor(DishDTO dishDTO) {
         Dish dish = Dish.builder()
                 .id(dishDTO.getId())
@@ -121,6 +122,7 @@ public class DishServiceImpl implements DishService {
     }
 
     @Override
+    @Transactional
     public void startOrStopDish(Integer status, Long dishId) {
         Dish dish = Dish.builder()
                 .id(dishId)
